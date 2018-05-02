@@ -117,4 +117,5 @@ function wcc_hide_category_count() {
 	// No count
 }
 
+
 ?>

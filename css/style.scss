@@ -5,6 +5,7 @@ $hoofdcolor: #111111;
 $secondcolor: #E9DB2E;
 $grey: #4a4a4a;
 $darkgrey: #383838;
+$lightgrey: #a5a5a5;
 
 $topbar: #F0F0F0;
 $topbarheight: 44px;
@@ -718,6 +719,16 @@ h1 {
 	a {
 		color:$darkgrey;
 		}
+}
+
+.woocommerce-price-suffix {
+	.woocommerce-Price-amount {
+		color:$lightgrey !important;
+	}
+	&:after {
+		content:' excl. BTW';
+		color: $lightgrey;
+	}
 }
 
 @keyframes fadeIn {
