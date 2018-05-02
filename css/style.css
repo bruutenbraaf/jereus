@@ -538,9 +538,9 @@ h1 {
 .posted_in a {
   color: #383838; }
 
-.woocommerce-price-suffix .woocommerce-Price-amount {
+.woocommerce-Price-suffix .woocommerce-Price-amount {
   color: #a5a5a5 !important; }
-.woocommerce-price-suffix:after {
+.woocommerce-Price-suffix:after {
   content: ' excl. BTW';
   color: #a5a5a5; }
 
