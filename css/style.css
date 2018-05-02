@@ -538,11 +538,11 @@ h1 {
 .posted_in a {
   color: #383838; }
 
-.woocommerce-Price-suffix .woocommerce-Price-amount {
+small .woocommerce-Price-amount {
   color: #a5a5a5 !important; }
-.woocommerce-Price-suffix:after {
-  content: ' excl. BTW';
-  color: #a5a5a5; }
+  small .woocommerce-Price-amount:after {
+    content: ' excl. BTW';
+    color: #a5a5a5; }
 
 @keyframes fadeIn {
   0% {

@@ -721,13 +721,13 @@ h1 {
 		}
 }
 
-.woocommerce-Price-suffix {
+small {
 	.woocommerce-Price-amount {
 		color:$lightgrey !important;
-	}
-	&:after {
+		&:after {
 		content:' excl. BTW';
 		color: $lightgrey;
+	}
 	}
 }
 
