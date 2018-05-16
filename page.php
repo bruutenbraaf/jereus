@@ -1,16 +1,20 @@
 <?php
 get_header(); ?>
 
-<?php if ( get_field( 'omslagfoto_categorie' ) ) { ?>
-<div class="categorie_omslag" style="background:url('<?php the_field( 'omslagfoto_categorie', $term_id_prefixed ); ?>'); background-position: <?php the_field( 'foto_positie', $term_id_prefixed ); ?>;">
+<?php if ( get_field( 'omslagfoto_pagina' ) ) { ?>
+<div class="categorie_omslag" style="background:url('<?php the_field( 'omslagfoto_pagina' ); ?>'); background-position: <?php the_field( 'foto_positie_pagina' ); ?>;">
 	
 </div>
 
-<?php } ?>	
+<?php } ?>
 <div class="container the_content">
 	<div class="row">
 		<div class="col-md-3 sidebar">
-			<?php dynamic_sidebar( 'page_sidebar' ); ?>
+			<div class="inner_sidebar">
+				<div class="sidebar_content">
+				<?php dynamic_sidebar( 'page_sidebar' ); ?>
+				</div>
+			</div>
 		</div>
 		<div class="col-md-9">
 			

@@ -18,6 +18,7 @@ function setHeight(col) {
     });
     $col.height($maxHeight);
 }
+
   
 });	
 

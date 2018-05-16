@@ -3,25 +3,25 @@
 Template Name: WooCommerce
 */
 get_header(); ?>
-<div class="filter_products">
-	<div class="grid">
-				<div>
-				<span></span>
-				<span></span>
-				<span></span>
-				</div>
-				<p>Filter producten</p>
-	</div>
+
+<?php if ( get_field( 'omslagfoto_pagina' ) ) { ?>
+<div class="categorie_omslag" style="background:url('<?php the_field( 'omslagfoto_pagina' ); ?>'); background-position: <?php the_field( 'foto_positie_pagina' ); ?>;">
+	
 </div>
-<div class="content webshop">
-	<div class="grid">
-		<div class="bb-2">
-			<div class="sidebar">
-			Wooo
-			</div>
-		</div>
-		<div class="bb-10 producten">
-			<?php woocommerce_content(); ?>	
+
+<?php } ?>
+<div class="container woocommerce_container the_content">
+	<div class="row">
+		<div class="col-md-12">
+		
+			
+			
+			<?php if (have_posts()) : while (have_posts()) : the_post();?>
+				<?php the_content(); ?>
+			<?php endwhile; endif; ?>
+			
+			
+			
 		</div>
 	</div>
 </div>
