@@ -1686,6 +1686,29 @@ ul.page-numbers:before {
 	
 }
 
+@media only screen and (max-width: 320px) { 
+	.top_bar 
+		.container { 
+			.row { 
+				.user_menu {
+				    width: 80%;
+				    float: left;
+				    max-width: 80%;
+	    		}
+	   		} 
+	    }	
+	.hoofd_menu 
+		.container { 
+			.row { 
+				.branding { 
+					img {
+						max-width: 100%;
+					}
+				}
+			}
+		}
+}
+
 @keyframes topIn {
   0% {
     top:-102px;
