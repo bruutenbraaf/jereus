@@ -232,7 +232,7 @@ h3 {
       color: #fff; }
     .hoofd_menu .container .row .winkelmand .cart {
       position: relative;
-      width: 28px;
+      width: 27px;
       height: 36px;
       float: right;
       display: flex;
@@ -244,7 +244,7 @@ h3 {
       .hoofd_menu .container .row .winkelmand .cart .count {
         width: 28px;
         text-align: center;
-        padding-top: 8px;
+        padding-top: 12px;
         font-size: 12px; }
 
 .carousel {
@@ -1099,6 +1099,33 @@ ul.page-numbers:before {
 @media only screen and (max-width: 1024px) {
   .container {
     width: 95%; }
+
+  .footer ul li:after, .categorien ul li a:after {
+    right: 0px; }
+
+  .footer ul li:hover:after, .categorien ul li a:hover:after {
+    right: 4px !important; }
+
+  .coupon {
+    width: 100%; }
+
+  .intro_titel h1 {
+    font-size: 1.4em; }
+
+  .tribe-event-schedule-details {
+    float: none;
+    padding: 0px;
+    width: 100%;
+    display: block;
+    clear: both; }
+
+  .tribe-events-gmap {
+    display: block;
+    float: left; }
+
+  .tribe-events-loop {
+    clear: both;
+    padding-top: 34px; }
 
   .about .image {
     display: none; }
