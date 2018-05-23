@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700,800");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700");
-.hoofd_menu .container .row .categorieen ul li .sub_cat li a, .hoofd_menu .container .row .categorieen ul li .sub_cat li a:hover, .hoofd_menu .container .row .categorieen ul li:hover .sub_cat {
-  transition-duration: 0.4s; }
+.hoofd_menu .container .row .categorieen ul li .sub_cat li a, .hoofd_menu .container .row .categorieen ul li .sub_cat li a:hover, .hoofd_menu .container .row .categorieen ul li:hover .sub_cat, .hoofd_menu .container .row .categorieen ul li a, .hoofd_menu .container .row .categorieen ul li a:hover, .required:after, .required:hover:after {
+  transition-duration: 0.2s; }
 
 .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .tribe-events-read-more {
   display: -webkit-inline-box !important;
@@ -30,14 +30,19 @@
   -webkit-clip-path: polygon(10% 0, 100% 14%, 90% 92%, 0% 100%);
   clip-path: polygon(10% 0, 100% 14%, 90% 92%, 0% 100%); }
 
-.carousel .carousel-inner .carousel-item .container {
+.carousel .carousel-inner .carousel-item .container, .show {
   animation: fadeIn;
   animation-duration: 1s;
   animation-fill-mode: forwards; }
 
+.hide_user {
+  animation: hideuser;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards; }
+
 .hoofd_menu .container .row .categorieen ul li:hover .sub_cat {
   animation: subIn;
-  animation-duration: 0.4s;
+  animation-duration: 0.2s;
   animation-fill-mode: forwards; }
 
 .chosen:after {
@@ -81,12 +86,15 @@ a {
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
+  a:hover {
+    color: #4a4a4a;
+    text-decoration: none; }
 
 h1 {
   font-family: "Roboto Slab", serif;
   font-size: 26px;
   color: #111111;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.2s;
   font-weight: bold;
   text-transform: uppercase;
   font-style: italic; }
@@ -139,7 +147,11 @@ h3 {
 
 .hoofd_menu {
   color: #fff;
-  background: #111111; }
+  background: #111111;
+  position: absolute;
+  width: 100%;
+  max-height: 102px;
+  position: 9999; }
   .hoofd_menu .container .row {
     height: 102px;
     display: flex;
@@ -150,6 +162,7 @@ h3 {
     .hoofd_menu .container .row .categorieen {
       text-align: center; }
       .hoofd_menu .container .row .categorieen ul {
+        padding: 0px;
         margin: 0px -15px;
         list-style: none;
         display: inline-block; }
@@ -202,34 +215,40 @@ h3 {
                 .hoofd_menu .container .row .categorieen ul li .sub_cat li a .fa {
                   padding-right: 8px; }
                 .hoofd_menu .container .row .categorieen ul li .sub_cat li a:hover {
-                  color: #fff;
+                  color: #E9DB2E;
                   text-decoration: none;
                   background: #a5a5a5; }
           .hoofd_menu .container .row .categorieen ul li:hover .sub_cat {
             opacity: 1;
             visibility: visible;
             pointer-events: all; }
+            .hoofd_menu .container .row .categorieen ul li:hover .sub_cat a:hover {
+              color: #fff !important; }
           .hoofd_menu .container .row .categorieen ul li a {
             color: #fff; }
+            .hoofd_menu .container .row .categorieen ul li a:hover {
+              color: #a5a5a5; }
     .hoofd_menu .container .row .winkelmand a {
       color: #fff; }
     .hoofd_menu .container .row .winkelmand .cart {
       position: relative;
-      width: 44px;
+      width: 28px;
       height: 36px;
       float: right;
       display: flex;
       align-items: center;
       text-align: center;
       background-size: cover;
-      background: url("../img/cart.svg") no-repeat; }
+      background: url("../img/cart.svg") no-repeat;
+      background-position: right; }
       .hoofd_menu .container .row .winkelmand .cart .count {
-        width: 27px;
+        width: 28px;
         text-align: center;
         padding-top: 8px;
         font-size: 12px; }
 
 .carousel {
+  z-index: 0;
   position: relative; }
   .carousel:after {
     content: '';
@@ -239,7 +258,9 @@ h3 {
     left: 0px;
     position: absolute;
     z-index: 9999;
-    background: url(../img/grunge.svg); }
+    background: url(../img/grunge.svg);
+    background-repeat: no-repeat;
+    background-position: bottom; }
   .carousel .carousel-inner .carousel-item {
     min-height: 64vh;
     background-repeat: no-repeat !important;
@@ -291,7 +312,12 @@ h3 {
     float: left;
     width: 25%;
     padding: 15px;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0);
+    transition-duration: 0.3s;
+    margin-top: -1px; }
     .uitgelicht_homepagina ul li .product_image {
       width: 100%;
       min-height: 200px;
@@ -378,7 +404,9 @@ h3 {
     left: 0px;
     position: absolute;
     z-index: 5;
-    background: url(../img/grunge.svg); }
+    background: url(../img/grunge.svg);
+    background-repeat: no-repeat;
+    background-position: bottom; }
   .about .container .row {
     padding: 60px 0vh; }
   .about .image {
@@ -406,7 +434,7 @@ h3 {
     font-family: "Roboto Slab", serif;
     font-size: 28px;
     color: #E9DB2E;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.2s;
     font-weight: bold; }
   .about p {
     padding-bottom: 24px; }
@@ -449,6 +477,7 @@ h3 {
         right: 15px !important; }
 
 .footer {
+  margin-top: 30px;
   color: #E1E1E1;
   background: #131313; }
   .footer .col-md-3 {
@@ -721,7 +750,11 @@ small .woocommerce-Price-amount {
     margin: 0 auto; }
 
 .woocommerce-page.columns-3 ul.products li.product, .woocommerce.columns-3 ul.products li.product {
-  text-align: center; }
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0);
+  transition-duration: 0.3s;
+  margin-top: -1px; }
 
 .amount_incl {
   font-weight: 500;
@@ -746,7 +779,7 @@ small .woocommerce-Price-amount {
 .woocommerce ul.products li.product:hover, .woocommerce-page ul.products li.product:hover {
   border: 1px solid #cccccc;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
-  transition-duration: 0.4px;
+  transition-duration: 0.3s;
   margin-top: -1px; }
   .woocommerce ul.products li.product:hover img, .woocommerce-page ul.products li.product:hover img {
     margin-right: 0px;
@@ -796,6 +829,8 @@ small .woocommerce-Price-amount {
     float: left; }
 
 .woocommerce ul.products li.product a img {
+  width: 90%;
+  margin: 0 auto !important;
   margin-top: 20px; }
 
 .woocommerce span.onsale {
@@ -853,7 +888,7 @@ ul.page-numbers:before {
 .uitgelichte_producten_homepagina li:hover {
   border: 1px solid #cccccc;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
-  transition-duration: 0.4px;
+  transition-duration: 0.2s;
   margin-top: -1px; }
 
 .woocommerce_container {
@@ -1000,11 +1035,236 @@ ul.page-numbers:before {
 .woocommerce form .form-row {
   margin: 0 0 6px -3px; }
 
+.aanbiedingen ul li {
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0);
+  transition-duration: 0.3s;
+  margin-top: -1px; }
+
+.aanbiedingen ul li:hover {
+  border: 1px solid #cccccc;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
+  transition-duration: 0.2s;
+  margin-top: -1px; }
+
+.col-1 {
+  max-width: inherit; }
+
+.col-2 {
+  max-width: inherit; }
+
+.edit {
+  color: #a5a5a5; }
+
+.required {
+  border-bottom: 0;
+  font-weight: 400 !important;
+  text-decoration: none !important; }
+  .required:after {
+    font-weight: 400;
+    content: ' Verplicht veld';
+    opacity: 0; }
+  .required:hover:after {
+    opacity: 1; }
+
+.is_fixed {
+  z-index: 99999 !important;
+  top: -102;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  animation: topIn;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards; }
+
+.top {
+  margin-top: 102px; }
+
+.space {
+  min-height: 102px; }
+
+.show {
+  display: block !important; }
+
+.hide_user {
+  display: block !important; }
+
+.skip {
+  display: none; }
+
+.h_skip {
+  display: none; }
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 95%; }
+
+  .about .image {
+    display: none; }
+
+  .carousel
+  .carousel-inner .carousel-item .container .row h1 {
+    font-weight: 700;
+    font-style: italic;
+    font-size: 2.4em;
+    color: #fff;
+    letter-spacing: .6px;
+    font-family: "Roboto Slab",serif; }
+  .carousel
+  .carousel-inner .carousel-item .container .row p {
+    font-style: italic;
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: .6px; }
+
+  .footer .col-md-3 {
+    padding: 45px 0px 0px 0px; }
+
+  .footer .branding {
+    float: none; }
+
+  .winkelmand {
+    position: absolute;
+    right: 8px;
+    top: 0px; }
+
+  .categorieen {
+    position: relative;
+    z-index: 999; }
+    .categorieen ul {
+      height: 100% !important; }
+
+  .hoofd_menu {
+    z-index: 9999; }
+
+  .h_skip {
+    display: block; }
+
+  .hoofd_menu {
+    max-height: inherit; }
+
+  .uitgelicht_homepagina ul {
+    display: contents; }
+    .uitgelicht_homepagina ul li {
+      width: 50%; }
+
+  .hoofd_menu {
+    max-height: inherit; }
+    .hoofd_menu .winkelmand {
+      width: 60%;
+      float: left;
+      margin-top: -8px;
+      display: block; }
+    .hoofd_menu .container .h_skip, .hoofd_menu .container .branding, .hoofd_menu .container .winkelmand {
+      padding: 42px 15px; }
+    .hoofd_menu .container [class*=col-]:first-child {
+      width: 25%;
+      float: left; }
+    .hoofd_menu .container [class*=col-]:nth-child(2) {
+      width: 50%;
+      float: left; }
+    .hoofd_menu .container [class*=col-]:last-child {
+      width: 25%;
+      float: left; }
+    .hoofd_menu .container .row {
+      display: inherit;
+      align-items: inherit; }
+      .hoofd_menu .container .row .categorieen {
+        display: none;
+        clear: both; }
+        .hoofd_menu .container .row .categorieen ul {
+          width: 100%;
+          height: 0vh;
+          overflow: scroll;
+          padding: 15px 0 30px 0px; }
+          .hoofd_menu .container .row .categorieen ul li {
+            float: none; }
+    .hoofd_menu .container .h_button {
+      cursor: pointer;
+      position: relative;
+      width: 20px;
+      height: 20px;
+      float: left; }
+      .hoofd_menu .container .h_button span {
+        margin: 5px 0px;
+        width: 20px;
+        min-height: 2px;
+        background: #F0F0F0;
+        display: block; }
+
+  .top_bar {
+    position: relative;
+    z-index: 999999; }
+    .top_bar .container .row .user_menu ul {
+      float: left;
+      position: relative;
+      padding-right: 15px;
+      margin-left: 15px; }
+
+  .skip {
+    display: block;
+    width: 30%;
+    float: left;
+    height: 26px;
+    position: absolute;
+    top: 0px;
+    top: 8px; }
+
+  .branding {
+    width: 40%;
+    float: left;
+    text-align: center; }
+
+  .top_bar .container .row {
+    position: relative; }
+    .top_bar .container .row .skip {
+      right: 0px; }
+    .top_bar .container .row .user_menu {
+      width: 70%;
+      float: left;
+      max-width: 70%; }
+    .top_bar .container .row .top_menu {
+      display: none; }
+      .top_bar .container .row .top_menu ul {
+        margin: 0px; }
+      .top_bar .container .row .top_menu li {
+        float: none;
+        padding: 12px 0px; }
+
+  .m_button {
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    height: 26px;
+    float: right;
+    right: 15px; }
+    .m_button span {
+      margin: 5px 0px;
+      width: 20px;
+      min-height: 2px;
+      background: #4a4a4a;
+      display: block; }
+
+  .user_menu {
+    width: 70%;
+    float: right; } }
+@keyframes topIn {
+  0% {
+    top: -102px; }
+  100% {
+    top: 0px; } }
 @keyframes fadeIn {
   0% {
     opacity: 0.0; }
   100% {
     opacity: 1.0; } }
+@keyframes hideuser {
+  0% {
+    opacity: 1.0; }
+  100% {
+    opacity: 0;
+    margin-top: -50px; } }
 @keyframes rotateIn {
   0% {
     transform: rotate(0deg); }

@@ -6,7 +6,7 @@
 	*/	
 get_header(); ?>
 <?php if ( have_rows( 'carousel', 'option' ) ): ?>
-	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+	<div id="carouselHomepagina" class="carousel slide" data-ride="carousel">
 	  <div class="carousel-inner" role="listbox">
 		  <?php while ( have_rows( 'carousel', 'option' ) ) : the_row(); ?>
 		  	<?php if ( get_row_layout() == 'item' ) : ?>
@@ -26,11 +26,11 @@ get_header(); ?>
 	    <?php endif; ?>
 	<?php endwhile; ?>	    
 	  </div>
-	  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+	  <a class="carousel-control-prev" href="#carouselHomepagina" role="button" data-slide="prev">
 	    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 	    <span class="sr-only">Previous</span>
 	  </a>
-	  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+	  <a class="carousel-control-next" href="#carouselHomepagina" role="button" data-slide="next">
 	    <span class="carousel-control-next-icon" aria-hidden="true"></span>
 	    <span class="sr-only">Next</span>
 	  </a>
@@ -109,7 +109,22 @@ wp_reset_query(); ?>
 			<h1>Nu bij ons in de <span>aanbieding</span></h1>
 				<ul>
 			<?php
-        $args = array( 'post_type' => 'product', 'posts_per_page' => 3, 'product_cat' => 'aanbieding', 'orderby' => 'rand' );
+        $args = array( 'post_type' => 'product', 'posts_per_page' => 3, 'meta_query'     => array(
+                    'relation' => 'OR',
+                    array( // Simple products type
+                        'key'           => '_sale_price',
+                        'value'         => 0,
+                        'compare'       => '>',
+                        'type'          => 'numeric'
+                    ),
+                    array( // Variable products type
+                        'key'           => '_min_variation_sale_price',
+                        'value'         => 0,
+                        'compare'       => '>',
+                        'type'          => 'numeric'
+                    )
+                )
+        );
         $loop = new WP_Query( $args );
         while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
         

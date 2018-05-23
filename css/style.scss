@@ -30,7 +30,7 @@ $h2Height: 0.8em;
 $priceslider: #d6d6d6;
 
 %transition {
- 	transition-duration: 0.4s;
+ 	transition-duration: 0.2s;
 }
 
 %normalbutton {
@@ -80,9 +80,15 @@ $priceslider: #d6d6d6;
 	animation-fill-mode: forwards;
 }
 
+%hideuser {
+ 	animation: hideuser;
+ 	animation-duration: 0.4s;
+	animation-fill-mode: forwards;
+}
+
 %subIn {
  	animation: subIn;
- 	animation-duration: 0.4s;
+ 	animation-duration: 0.2s;
 	animation-fill-mode: forwards;
 }
 
@@ -133,13 +139,17 @@ a {
     text-decoration: none;
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
+    &:hover {
+	    color:$grey;
+	    text-decoration: none;
+    }
 }
 
 h1 {
 		font-family: $roboto;
 		font-size: 26px;
 		color: $hoofdcolor;
-		letter-spacing: 0.4px;
+		letter-spacing: 0.2s;
 		font-weight: bold;
 		text-transform: uppercase;
 		font-style: italic;
@@ -208,6 +218,10 @@ h3 {
 .hoofd_menu {
 	color: $hoofdmenulinks;
 	background: $hoofdmenu;
+	position: absolute;
+    width: 100%;
+    max-height: 102px;
+    position: 9999;
 	.container {
 		.row {
 			height: $hoofdmenuheight;
@@ -222,6 +236,7 @@ h3 {
 			.categorieen {
 				text-align: center;
 				ul {
+					padding:0px;
 					margin:0px -15px;
 					list-style: none;
 					display: inline-block;
@@ -278,7 +293,7 @@ h3 {
 									    padding-right: 8px;
 								    }
 								    &:hover {
-									    color: #fff;
+									    color: $secondcolor;
 									    text-decoration: none;
 									    background:$lightgrey;
 									    @extend %transition;
@@ -292,9 +307,19 @@ h3 {
 							pointer-events: all;
 							@extend %transition;
 							@extend %subIn;
+							a {
+								&:hover {
+								color:$hoofdmenulinks !important;
+								}
+							}
 						}
 						a {
 							color: $hoofdmenulinks;
+							@extend %transition;
+							&:hover {
+								color:$lightgrey;
+								@extend %transition;
+							}
 						}
 					}
 				}
@@ -305,7 +330,7 @@ h3 {
 				}
 				.cart {
 					position: relative;
-					width: 44px;
+					width: 28px;
 					height: 36px;
 					float: right;
 					display: flex;
@@ -313,8 +338,9 @@ h3 {
 					text-align: center;
 					background-size: cover;
 					background: url("../img/cart.svg") no-repeat;
+					background-position: right;
 					.count {
-						width: 27px;
+						width: 28px;
 					    text-align: center;
 					    padding-top: 8px;
 					    font-size: 12px;
@@ -326,6 +352,7 @@ h3 {
 }
 
 .carousel {
+	z-index: 0;
 	position: relative;
 	&:after {
 		content: '';
@@ -336,6 +363,8 @@ h3 {
 	    position: absolute;
 	    z-index: 9999;
 	    background: url(../img/grunge.svg);
+	    background-repeat: no-repeat;
+	    background-position: bottom;
 	}
 	.carousel-inner {
 		.carousel-item {
@@ -406,6 +435,11 @@ h3 {
 			width:25%;
 			padding:15px;
 			box-sizing: border-box;
+			text-align: center;
+			border: 1px solid rgba(0,0,0,0);
+		    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.00);
+		    transition-duration: 0.3s;
+		    margin-top:-1px;
 			.product_image {
 			    width: 100%;
 				min-height: 200px;
@@ -484,7 +518,6 @@ h3 {
 	}
 }
 
-
 .about {
 	color:#fff;
 	background:$hoofdcolor;
@@ -512,6 +545,8 @@ h3 {
 	   	position: absolute;
 	   	z-index: 5;
     	background: url(../img/grunge.svg);
+    	background-repeat: no-repeat;
+	    background-position: bottom;
 	}
 	.container {
 		.row {
@@ -545,7 +580,7 @@ h3 {
 		font-family: $roboto;
 		font-size: 28px;
 		color: #E9DB2E;
-		letter-spacing: 0.4px;
+		letter-spacing: 0.2s;
 		font-weight: bold;
 	}
 	p {
@@ -602,6 +637,7 @@ h3 {
 
 
 .footer {
+	margin-top:30px;
 	color:#E1E1E1;
 	background: #131313;
 	.col-md-3 {
@@ -962,6 +998,10 @@ small {
 
 .woocommerce-page.columns-3 ul.products li.product, .woocommerce.columns-3 ul.products li.product {
 	text-align: center;
+	border: 1px solid rgba(0,0,0,0);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.00);
+    transition-duration: 0.3s;
+    margin-top:-1px;
 }
 
 .amount_incl {
@@ -991,9 +1031,9 @@ small {
 }
 
 .woocommerce ul.products li.product:hover, .woocommerce-page ul.products li.product:hover {
-    border: 1px solid #cccccc;
+    border: 1px solid rgba(204, 204, 204, 1);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
-    transition-duration: 0.4px;
+    transition-duration: 0.3s;
     margin-top:-1px;
     img {
 	    margin-right:0px;
@@ -1063,6 +1103,8 @@ small {
 		li.product { 
 			a {
 				img {
+					width:90%; 
+					margin:0 auto !important;
 					margin-top:20px;
 				}
 			}
@@ -1137,7 +1179,7 @@ ul.page-numbers:before {
 .uitgelichte_producten_homepagina li:hover {
 	border: 1px solid #cccccc;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
-    transition-duration: 0.4px;
+    transition-duration: 0.2s;
     margin-top:-1px;
 }
 
@@ -1353,12 +1395,322 @@ ul.page-numbers:before {
 	margin: 0 0 6px -3px;
 }
 
+.aanbiedingen ul li {
+	text-align: center;
+	border: 1px solid rgba(0,0,0,0);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.00);
+    transition-duration: 0.3s;
+    margin-top:-1px;
+}
+
+.aanbiedingen ul li:hover {
+	border: 1px solid #cccccc;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
+    transition-duration: 0.2s;
+    margin-top:-1px;
+}
+
+
+.col-1 {
+    max-width: inherit;
+}
+
+.col-2 {
+    max-width: inherit;
+}
+
+.edit {
+	color: $lightgrey;
+}
+
+.required {
+	border-bottom:0;
+	font-weight: 400 !important;
+	text-decoration: none !important;
+	&:after {
+		font-weight: 400;
+		content:' Verplicht veld';
+		opacity: 0;
+		@extend %transition;
+	}
+	&:hover:after {
+		opacity: 1;
+		@extend %transition;
+	}
+}
+
+
+.is_fixed {
+	z-index: 99999 !important;
+	top:-102;
+	left:0;
+	width: 100%;
+	position: fixed;
+	animation: topIn;
+ 	animation-duration: 0.3s;
+	animation-fill-mode: forwards;
+}
+
+.top {
+	margin-top: 102px;
+}
+
+.space {
+	min-height: 102px;
+}
+
+.show {
+	display: block !important;
+	@extend %fadeIn;
+}
+
+.hide_user {
+	display: block !important;
+	@extend %hideuser;
+}
+
+
+
+.skip {
+	display: none;
+}
+
+.h_skip {
+	display: none;
+}
+
+
+@media only screen and (max-width: 1024px) {
+	.container {
+		width: 95%;
+	}
+
+	.about .image {
+		display:none;
+	}
+	
+	.carousel 
+		 .carousel-inner {
+			.carousel-item { 
+				.container  {
+					.row {
+						h1 {
+						    font-weight: 700;
+						    font-style: italic;
+						    font-size: 2.4em;
+						    color: #fff;
+						    letter-spacing: .6px;
+						    font-family: "Roboto Slab",serif;
+    					}
+    					p {
+	    					font-style: italic;
+						    font-size: 18px;
+						    color: #fff;
+						    letter-spacing: .6px;
+    					}
+    				}
+    			}
+    		}
+    	}
+
+	
+	.footer .col-md-3 {
+    	padding: 45px 0px 0px 0px;
+	}
+	
+	.footer .branding {
+		float: none;
+	}
+	
+	.winkelmand {
+		position: absolute;
+		right: 8px;
+		top:0px;
+	}
+	
+	.categorieen {
+		position: relative;
+		z-index: 999;
+			ul {
+				height:100% !important;
+			}
+	}
+	
+	.hoofd_menu {
+		z-index: 9999;
+	}
+	
+	.h_skip {
+		display: block;
+	}
+	
+	.hoofd_menu {
+		max-height: inherit;
+	}
+	
+	.uitgelicht_homepagina ul {
+		display: contents;
+			li {
+			width:50%;
+			}
+	}
+	
+	.hoofd_menu { 
+		max-height: inherit;
+		.winkelmand {
+			width:60%; float:left;
+			margin-top:-8px;
+			display: block;
+		}
+		.container {
+			.h_skip, .branding, .winkelmand  {
+				padding:42px 15px;
+			}
+			[class*=col-]:first-child {
+				width:25%;
+				float:left;
+			}
+			[class*=col-]:nth-child(2) {
+				width:50%;
+				float:left;
+			}
+			[class*=col-]:last-child {
+				width:25%;
+				float:left;
+			}
+			.row {
+				display: inherit;
+				align-items: inherit;
+				.categorieen {
+					display: none;
+					clear: both;
+					ul {
+						width:100%;
+						height: 0vh;
+					    overflow: scroll;
+						padding: 15px 0 30px 0px;
+						li {
+							float:none;
+						}
+					}
+				}
+			}
+		.h_button {
+		cursor: pointer;
+		position: relative;
+		width:20px;
+		height: 20px;
+		float: left;
+		span {
+			margin:5px 0px;
+			width:20px;
+			min-height: 2px;
+			background: $lightergrey;
+			display: block;
+		}
+	}
+		}
+	}
+	
+	.top_bar {
+		position: relative;
+		z-index: 999999;
+		.container .row .user_menu ul {
+		    float: left;
+		    position: relative;
+		    padding-right: 15px;
+		    margin-left: 15px;
+	    }
+	}
+	
+	.skip {
+		display: block;
+		width:30%; 
+		float: left;
+		height: 26px;
+		position: absolute;
+		top: 0px;
+		top: 8px;
+	}
+	
+	.branding {
+		width:40%;
+		float:left;
+		text-align: center;
+	}
+	
+	.top_bar {
+		.container {
+			.row {
+				position: relative;
+				.skip {
+					right:0px;
+				}
+				.user_menu {
+				    width: 70%;
+				    float: left;
+				    max-width: 70%;
+				}
+				.top_menu {
+					display: none;
+					ul {
+						margin:0px;
+					}
+					li {
+						float:none;
+						padding:12px 0px;
+					}
+				}
+			}
+		}
+	}
+	.m_button {
+	    cursor: pointer;
+	    position: absolute;
+	    width: 20px;
+	    height: 26px;
+	    float: right;
+	    right: 15px;
+		span {
+			margin:5px 0px;
+			width:20px;
+			min-height: 2px;
+			background: $grey;
+			display: block;
+		}
+	}
+	.user_menu {
+		width:70%; 
+		float:right;
+	}
+	
+}
+
+@keyframes topIn {
+  0% {
+    top:-102px;
+  }
+  100% {
+    top:0px;
+  }
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0.0;
   }
   100% {
     opacity: 1.0;
+  }
+}
+
+@keyframes hideuser {
+  0% {
+    opacity: 1.0;
+  }
+  100% {
+    opacity: 0;
+    margin-top:-50px;
   }
 }
 

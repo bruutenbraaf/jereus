@@ -12,7 +12,7 @@ get_header(); ?>
 </div>
 
 <?php } ?>
-<div class="container the_content">
+<div class="container">
 	<div class="row">
 		<div class="col-md-12">
 			
