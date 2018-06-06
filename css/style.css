@@ -583,15 +583,18 @@ h3 {
     .sidebar .widget p {
       font-size: 16px; }
   .sidebar .price_label {
-    width: 50%;
     float: right;
     padding: 26px 0px 0px 0px;
     margin: 0px; }
 
 .woocommerce ul.products li h2 {
   color: #111111; }
-.woocommerce ul.products li span.price {
+.woocommerce ul.products li .incl_price {
+  font-size: 14px;
   color: #E9DB2E; }
+.woocommerce ul.products li .exl_btw, .woocommerce ul.products li .exl_btw span {
+  font-size: 14px;
+  color: #a5a5a5 !important; }
 .woocommerce ul.products li a {
   color: #E9DB2E; }
 .woocommerce ul.products li .amount {
@@ -756,22 +759,22 @@ small .woocommerce-Price-amount {
   transition-duration: 0.3s;
   margin-top: -1px; }
 
-.amount_incl {
-  font-weight: 500;
-  font-size: 16px;
-  color: #111111;
-  padding-right: 10px; }
-
-.amount_excl {
-  font-size: 12px;
-  color: #a5a5a5; }
-
 .summary .amount_incl {
   font-size: 32px;
   width: 100%;
   display: block;
   line-height: 2px;
-  margin-top: 10px; }
+  margin-top: 10px;
+  padding-bottom: 20px;
+  font-weight: bold;
+  font-weight: 500;
+  color: #111111;
+  padding-right: 10px; }
+.summary .amount_excl {
+  font-size: 12px;
+  color: #a5a5a5;
+  padding-bottom: 20px;
+  display: block; }
 
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
   margin-bottom: 1em; }
@@ -916,7 +919,7 @@ ul.page-numbers:before {
 .coupon {
   width: 50%; }
   .coupon input {
-    width: 50% !important;
+    width: 312px !important;
     float: left;
     height: 48px;
     border-right: 0px;

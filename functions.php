@@ -117,26 +117,6 @@ function wcc_hide_category_count() {
 	// No count
 }
 
-add_filter('woocommerce_variable_price_html', 'edit_price_display');
-function edit_price_display() {
-  $product = new WC_Product( get_the_ID() );
-  $price = $product->price;
- 
-  $price_incl_tax = $price + round($price * ( 21 / 100 ), 2);
-   
-  $price_incl_tax = number_format($price_incl_tax, 2, ",", "."); 
-  $price = number_format($price, 2, ",", "."); 
- 
-  $display_price = '<span class="price">';
-  $display_price .= '<span class="amount_incl">€ ' . $price_incl_tax .'</span>';
-  $display_price .= '<span class="amount_excl">€ ' . $price .'<small> excl BTW</small></span>';
-  $display_price .= '</span>';
- 
-  echo $display_price;
-}
- 
-add_filter('woocommerce_price_html', 'edit_price_display');
-add_filter('woocommerce_variable_price_html', 'edit_price_display');
 add_filter( 'wc_product_sku_enabled', '__return_false' );
 
 add_filter( 'woocommerce_pagination_args', 	'rocket_woo_pagination' );

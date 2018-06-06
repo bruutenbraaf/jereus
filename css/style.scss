@@ -772,7 +772,6 @@ h3 {
 		}
 	}
 	.price_label {
-		width: 50%;
 	    float: right;
 	    padding: 26px 0px 0px 0px;
 	    margin: 0px;
@@ -786,8 +785,13 @@ h3 {
 			h2 {
 				color:$hoofdcolor;
 			}
-			span.price {
+			.incl_price {
+				font-size: 14px;
 				color:$secondcolor;
+			}
+			.exl_btw, .exl_btw span {
+				font-size: 14px;
+				color: $lightgrey !important;
 			}
 			a {
 				color:$secondcolor;
@@ -1004,18 +1008,6 @@ small {
     margin-top:-1px;
 }
 
-.amount_incl {
-	font-weight: 500;
-	font-size: 16px;
-	color:$hoofdcolor;
-	padding-right: 10px;
-}
-
-.amount_excl {
-	font-size: 12px;
-	color: $lightgrey;
-}
-
 .summary {
 	.amount_incl { 
 		font-size: 32px;
@@ -1023,6 +1015,17 @@ small {
 	    display: block;
 	    line-height: 2px;
 	    margin-top: 10px;
+	    padding-bottom: 20px;
+	    font-weight: bold;
+	    font-weight: 500;
+		color:$hoofdcolor;
+		padding-right: 10px;
+	}
+	.amount_excl {
+		font-size: 12px;
+		color: $lightgrey;
+		padding-bottom: 20px;
+		display: block;
 	}
 }
 
@@ -1215,7 +1218,7 @@ ul.page-numbers:before {
 .coupon {
 	width:50%;
 	input {
-		width: 50% !important;
+		width: 312px !important;
 		float:left;
 		height: 48px;
 	    border-right: 0px;
