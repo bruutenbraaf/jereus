@@ -376,7 +376,7 @@ h3 {
       width: 100%;
       min-height: 200px;
       margin-bottom: 14px;
-      background-size: 70% auto !important;
+      background-size: contain !important;
       background-repeat: no-repeat !important;
       background-position: center center !important; }
     .uitgelicht_homepagina ul li .title {
@@ -922,7 +922,8 @@ small .woocommerce-Price-amount {
       top: -4px; }
   .price_slider_wrapper .price_slider_amount .button {
     padding: 8px 16px !important;
-    float: left; }
+    float: left;
+    margin: 20px 0px; }
 
 .woocommerce ul.products li.product {
   padding: 15px; }

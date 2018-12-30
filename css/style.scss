@@ -502,7 +502,7 @@ h3 {
 			    width: 100%;
 				min-height: 200px;
 				margin-bottom: 14px;
-				background-size: 70% auto !important;
+				background-size: contain !important;
 				background-repeat: no-repeat!important;
 				background-position: center center!important;
 			}
@@ -1041,11 +1041,14 @@ h3 {
 	}
 }
 
+
+
 .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
 	background: $secondcolor;
 	color:$darkgrey;
 	border-radius: 0;
 	font-weight: inherit;
+	
 	&:hover {
 		background: $darkgrey;
 		color:#fff;
@@ -1205,6 +1208,7 @@ small {
 	    .button {
 		    padding: 8px 16px !important;
 		    float:left;
+		    margin: 20px 0px;
 	    }
 	}
 }
