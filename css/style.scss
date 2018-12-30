@@ -7,7 +7,7 @@ $grey: #4a4a4a;
 $darkgrey: #383838;
 $lightgrey: #a5a5a5;
 $lightergrey: #F0F0F0;
-$border: #bfbfbf;
+$border: #e7e7e7;
 
 $topbar: #F0F0F0;
 $topbarheight: 44px;
@@ -60,8 +60,6 @@ $priceslider: #d6d6d6;
 		color: $darkgrey;
 		padding: 16px 32px;
 		background:$secondcolor;
-		-webkit-clip-path: polygon(10% 0, 100% 14%, 90% 92%, 0% 100%);
-		clip-path: polygon(10% 0, 100% 14%, 90% 92%, 0% 100%);
 }
 
 %buttonhover {
@@ -70,8 +68,6 @@ $priceslider: #d6d6d6;
 		color: $darkgrey;
 		padding: 16px 32px;
 		background:darken($secondcolor, 5%);
-		-webkit-clip-path: polygon(10% 0, 100% 14%, 90% 92%, 0% 100%);
-		clip-path: polygon(10% 0, 100% 14%, 90% 92%, 0% 100%);
 }
 
 %fadeIn {
@@ -183,32 +179,25 @@ h3 {
 				margin:0px -14px;
 				li {
 					float:left;
-					padding:12px;
 					line-height: 1;
+					padding:0px 10px;
 					a {
 						color: $topbarlinks;
+						&:hover {
+							color:black;
+						}
 					}
 				}
 			}
 			.user_menu {
 				ul {
+					display: flex;
+					align-items: center;
 					float: right;
 					position: relative;
 					padding-right: 15px;
-					&:before {
-						content: '';
-					    width: 15px;
-					    min-height: 19px;
-					    background-size: cover;
-					    display: block;
-					    position: absolute;
-					    top: 0px;
-					    left: -12px;
-					    background: url(../img/account_gebruiker.svg);
-					}
 					li {
 						float:left;
-						padding: 2px 12px;
 					}
 				}
 			}
@@ -271,14 +260,14 @@ h3 {
 						    li {
 							    &:first-child:before {
 								    content: '';
-								    width: 24px;
+								    width: 10px;
 								    height: 10px;
-								    background: $lightergrey;
-								    -webkit-clip-path: polygon(50% 0,0 100%,100% 100%);
-								    clip-path: polygon(50% 0,0 100%,100% 100%);
+								    transform: rotate(45deg);
+								    background: #f0f0f0;
 								    position: absolute;
-								    top: -9px;
+								    top: -5px;
 								    left: 14px;
+								    z-index: -1;
 							    }
 							    width: 100%;
 							    padding: 0;
@@ -397,8 +386,6 @@ h3 {
 						color: $darkgrey;
 					    padding: 16px 32px;
 					    background:$secondcolor;
-					    -webkit-clip-path: polygon(10% 0, 100% 14%, 90% 92%, 0% 100%);
-					    clip-path: polygon(10% 0, 100% 14%, 90% 92%, 0% 100%);
 					}
 				}
 			}
@@ -563,8 +550,6 @@ h3 {
 		z-index: 444;
     	margin-top: 20px;
     	background-size: cover !important;
-    	-webkit-clip-path: polygon(0 6%, 100% 0, 100% 100%, 4% 96%);
-    	clip-path: polygon(0 6%, 100% 0, 100% 100%, 4% 96%);
     	&:before {
 	    	content: '';
 			width: 100%;
@@ -735,8 +720,17 @@ h3 {
 	padding:6vh 15px;
 }
 
+.nice-select .list {
+	right:0;
+	left:inherit;
+}
+
 .sidebar {
 	position: relative;
+	.inner_sidebar {
+		position: sticky;
+		top:115px;
+	}
 	label {
 		font-family: $roboto;
 		font-size:1.4rem;
@@ -747,10 +741,38 @@ h3 {
 		margin-bottom:42px;
 	}
 	.widget {
-		margin-bottom:42px;
+		border-top: 1px solid #e7e7e7;
+		.widget-content {
+			display: none;
+			padding-bottom:10px;
+		}
 		h2 {
 			font-family: $roboto;
-			font-size:1.4rem;
+		    font-size: 1.2rem;
+		    padding: 10px 0px;
+		    margin: 0;
+		    color: #464646;
+		    position: relative;
+		    &:hover {
+			    cursor: pointer;
+		    }
+			&:after {
+				content: '';
+			    position: absolute;
+			    right: 0;
+			    top: 15px;
+			    height: 12px;
+			    width: 8px;
+			    opacity: 0.7;
+			    transform: rotate(90deg);
+			    background: url(../img/angle_dark.svg);
+			    background-repeat: no-repeat;
+			    background-size: cover;
+				-webkit-transition: all .2s ease-in-out;
+			    -moz-transition: all .2s ease-in-out;
+			    -o-transition: all .2s ease-in-out;
+			    transition: all .2s ease-in-out;
+			}
 		}
 		ul {
 			list-style: none;
@@ -778,6 +800,12 @@ h3 {
 	}
 }
 
+.widget-show {
+	&:after {
+		transform:rotate(-90deg) !important;
+	}
+}
+
 
 .woocommerce {
 	ul.products {
@@ -794,7 +822,10 @@ h3 {
 				color: $lightgrey !important;
 			}
 			a {
-				color:$secondcolor;
+				color:$darkgrey;
+				&:hover {
+					color: $secondcolor;
+				}
 			}
 			.amount {
 				color:$grey;
@@ -936,8 +967,6 @@ h3 {
 	color: $darkgrey;
 	padding: 16px 32px;
 	background:$secondcolor;
-	-webkit-clip-path: polygon(10% 0, 100% 14%, 90% 92%, 0% 100%);
-	clip-path: polygon(10% 0, 100% 14%, 90% 92%, 0% 100%);
 	}
 }
 
@@ -1001,11 +1030,19 @@ small {
 }
 
 .woocommerce-page.columns-3 ul.products li.product, .woocommerce.columns-3 ul.products li.product {
-	text-align: center;
 	border: 1px solid rgba(0,0,0,0);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.00);
     transition-duration: 0.3s;
     margin-top:-1px;
+}
+
+.orderby {
+	display: flex;
+	align-items: center;
+	border-bottom:1px solid $border;
+	.woocommerce-ordering {
+		margin-left: auto;
+	}
 }
 
 .summary {
@@ -1104,9 +1141,10 @@ small {
 .woocommerce {
 	ul.products { 
 		li.product { 
+			padding:15px;
 			a {
 				img {
-					width:90%; 
+					width:auto; 
 					margin:0 auto !important;
 					margin-top:20px;
 				}
@@ -1137,8 +1175,6 @@ small {
     right: 5px !important;
     height: 30px;
     top: 4px !important;
-    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-    clip-path: polygon(10px 0%, 100% 0%, 90% 100%, 0% 100%);
 }
 
 
@@ -1482,6 +1518,15 @@ ul.page-numbers:before {
 	display: none;
 }
 
+label {
+	width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+	.container {
+	    max-width: 90%;
+	}
+}
 
 @media only screen and (max-width: 1024px) {
 	.container {

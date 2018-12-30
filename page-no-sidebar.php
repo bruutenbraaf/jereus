@@ -1,4 +1,7 @@
 <?php
+/*
+Template Name: Geen sidebar
+*/
 get_header(); ?>
 
 <?php if ( get_field( 'omslagfoto_pagina' ) ) { ?>
@@ -9,15 +12,7 @@ get_header(); ?>
 <?php } ?>
 <div class="container the_content">
 	<div class="row">
-		<div class="col-md-3 sidebar">
-			<div class="inner_sidebar">
-				<div class="sidebar_content">
-					<h2>Filteren</h2>
-				<?php dynamic_sidebar( 'page_sidebar' ); ?>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-9">
+		<div class="col-md-12">
 			
 			
 			<?php if (have_posts()) : while (have_posts()) : the_post();?>

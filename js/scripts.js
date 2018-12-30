@@ -2,7 +2,13 @@ $( document ).ready(function() {
 	jQuery( '.carousel-inner').find('.carousel-item:first' ).addClass( 'active' );
 	
 	
-	
+
+  $('select').niceSelect();
+  
+$('.widgettitle').click(function(e) {
+	$(this).toggleClass('widget-show');
+    $(this).next('.widget-content').slideToggle(300);
+});
 	
 setHeight($('.products > li'));
 

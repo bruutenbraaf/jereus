@@ -1,5 +1,5 @@
 <?php
-
+	
 function cc_mime_types($mimes) {
   $mimes['svg'] = 'image/svg+xml';
   return $mimes;
@@ -14,6 +14,7 @@ function register_my_menus() {
   register_nav_menus(
     array(
       'hoofd_menu' => __( 'Hoofd Menu' ),
+      'cat_menu' => __( 'Categorie Menu' ),
       'gebruiker_menu' => __( 'Gebruiker Menu' ),
       'second_menu' => __( 'Secondaire Menu' ),
     )
@@ -27,9 +28,9 @@ add_action( 'init', 'register_my_menus' );
 			'name'          => 'Pagina Sidebar',
 			'id'            => 'page_sidebar',
 			'before_widget' => '<div class="widget">',
-			'after_widget'  => '</div>',
+			'after_widget'  => '</div></div>',
 			'before_title'  => '<h2 class="widgettitle">',
-			'after_title'   => '</h2>'
+			'after_title'   => '</h2><div class="widget-content">'
 		) );
 		
 		register_sidebar( array(

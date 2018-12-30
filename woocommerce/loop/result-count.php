@@ -22,6 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
+<div class="orderby">
 <p class="woocommerce-result-count">
 	<?php
 	if ( $total <= $per_page || -1 === $per_page ) {
