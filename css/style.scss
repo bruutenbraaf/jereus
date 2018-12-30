@@ -34,6 +34,11 @@ $priceslider: #d6d6d6;
  	transition-duration: 0.2s;
 }
 
+.woocommerce-input-wrapper {
+    box-sizing: border-box;
+    width: 100%;
+}
+
 %normalbutton {
 		display: -webkit-inline-box !important;
 		color: $darkgrey;

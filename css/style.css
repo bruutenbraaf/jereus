@@ -9,6 +9,10 @@
 .hoofd_menu .container .row .categorieen ul li .sub_cat li a, .hoofd_menu .container .row .categorieen ul li .sub_cat li a:hover, .hoofd_menu .container .row .categorieen ul li:hover .sub_cat, .hoofd_menu .container .row .categorieen ul li a, .hoofd_menu .container .row .categorieen ul li a:hover, .required:after, .required:hover:after {
   transition-duration: 0.2s; }
 
+.woocommerce-input-wrapper {
+  box-sizing: border-box;
+  width: 100%; }
+
 .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .tribe-events-read-more {
   display: -webkit-inline-box !important;
   color: #383838;
