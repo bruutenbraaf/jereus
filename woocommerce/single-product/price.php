@@ -25,3 +25,5 @@ global $product;
 ?>
 <span class="amount_incl"><?php echo $product->get_price_html(); ?></span>
 <span class="amount_excl"><?php echo wc_price( wc_get_price_excluding_tax( $product ) ); ?> excl. BTW</span>
+
+<span class="maten-tabel-button"> Toon alle maten </span>

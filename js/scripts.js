@@ -9,6 +9,14 @@ $('.widgettitle').click(function(e) {
 	$(this).toggleClass('widget-show');
     $(this).next('.widget-content').slideToggle(300);
 });
+
+$('.maten-tabel-button').click(function(e) {
+	$('.maten-tabel').toggleClass('toon-maten-tabel');
+});
+	
+$('.close-tabel').click(function(e) {
+	$('.maten-tabel').toggleClass('toon-maten-tabel');
+});
 	
 setHeight($('.products > li'));
 

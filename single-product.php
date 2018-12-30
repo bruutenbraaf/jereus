@@ -19,5 +19,29 @@ get_header(); ?>
 	</div>
 </div>
 
+<div class="maten-tabel">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 align-center">
+				<div class="close-tabel">
+					<div></div>
+					<div></div>
+				</div>
+				<h2>maten tabel</h2>
+				
+				<?php if ( have_rows( 'maat', 'option' ) ) : ?>
+					<?php while ( have_rows( 'maat', 'option' ) ) : the_row(); ?>
+					<div class="row tabel-row">
+						<div class="col-md-6"><?php the_sub_field( 'kuip_soort' ); ?></div><div class="col-md-6"><?php the_sub_field( 'diameter_x_hoogte' ); ?></div>
+					</div>
+					<?php endwhile; ?>
+				<?php else : ?>
+					<?php // no rows found ?>
+				<?php endif; ?>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 <?php get_footer(); ?>

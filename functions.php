@@ -101,6 +101,17 @@ acf_add_options_page( array(
 
 ) );
 
+
+acf_add_options_page( array(
+
+'page_title' 	=> 'Maten tabel (Kuipen)',
+'menu_title' 	=> 'Maten tabel (kuipen)',
+'menu_slug' 	=> 'maten-tabel',
+'capability' 	=> 'edit_posts', 
+'position' => 4
+
+) );
+
 acf_add_options_page( array(
 
 'page_title' 	=> 'Homepagina informatie',

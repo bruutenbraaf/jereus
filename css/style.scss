@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700,800');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700');
+@font-face { font-family: "Ionicons"; src: url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.eot?v=2.0.1"); src: url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.eot?v=2.0.1#iefix") format("embedded-opentype"), url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.ttf?v=2.0.1") format("truetype"), url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.woff?v=2.0.1") format("woff"), url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.svg?v=2.0.1#Ionicons") format("svg"); font-weight: normal; font-style: normal; }
 
 $hoofdcolor: #111111;
 $secondcolor: #E9DB2E;
@@ -162,6 +163,76 @@ h2 {
 h3 {
 	font-family: $roboto;
 	font-size: $h3;
+}
+
+.maten-tabel-button:before {
+	content:'\f264';
+	font-family: "Ionicons";
+}
+
+.maten-tabel-button {
+	padding: 0px 0px 30px 0px;
+	display: block;
+	cursor: pointer;
+}
+
+.maten-tabel-button:hover {
+	color: $secondcolor;
+}
+
+.maten-tabel {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    top: 0px;
+    left: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    overflow: scroll;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    .align-center {
+	    position: relative;
+	    background: white;
+	    margin:0 auto;
+	    padding: 30px;
+    }
+    .close-tabel {
+	   position: absolute;
+	    top: -40px;
+	    right: -20px;
+	    cursor: pointer;
+	    padding: 20px;
+	    div {
+		    width:20px;
+		    min-height: 2px;
+		    background:white;
+		    margin: -2px;
+		    &:first-child {
+			    transform: rotate(-45deg);
+		    }
+		    &:last-child {
+			    transform: rotate(45deg);
+		    }
+	    }
+    }
+    .tabel-row {
+	    border-bottom:1px solid $border;
+	    padding: 4px;
+    }
+}
+
+.toon-maten-tabel {
+	visibility: visible;
+	pointer-events: all;
+	opacity: 1;
 }
 
 .top_bar {
