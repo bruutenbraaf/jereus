@@ -3,7 +3,7 @@ $(document).ready(function () {
 
 
 
-    $('select').niceSelect();
+    $('select, .mollie-payments-for-woocommerce_issuer_mollie_wc_gateway_ideal').niceSelect();
 
     $('.widgettitle').click(function (e) {
         $(this).toggleClass('widget-show');
