@@ -1,9 +1,7 @@
+$('select, .mollie-payments-for-woocommerce_issuer_mollie_wc_gateway_ideal').niceSelect();
+
 $(document).ready(function () {
     jQuery('.carousel-inner').find('.carousel-item:first').addClass('active');
-
-
-
-    $('select, .mollie-payments-for-woocommerce_issuer_mollie_wc_gateway_ideal').niceSelect();
 
     $('.widgettitle').click(function (e) {
         $(this).toggleClass('widget-show');
