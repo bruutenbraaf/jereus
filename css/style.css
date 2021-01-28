@@ -460,6 +460,9 @@ h3 {
 .m-container {
   margin-bottom: 38px; }
 
+.the_content .widgettitle:after {
+  display: none !important; }
+
 .glightbox-tgl:hover {
   font-weight: bold;
   cursor: pointer; }
