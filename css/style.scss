@@ -1180,23 +1180,31 @@ h3 {
 	}
 }
 
-
 .woocommerce ul#shipping_method li input {
-    margin: 3px .4375em 0 0;
-    margin-top: 6px;
-    float: left;
-    width: 14px;
+	margin: 3px 0.4375em 0 0;
+	margin-top: 6px;
+	float: left;
+	width: 14px;
 }
 
-#add_payment_method #payment ul.payment_methods li input, .woocommerce-cart #payment ul.payment_methods li input, .woocommerce-checkout #payment ul.payment_methods li input {
-    margin: 0 1em 0 0;
-    width: 14px;
-    float: left;
-    margin-top: 10px;
+#add_payment_method #payment ul.payment_methods li input,
+.woocommerce-cart #payment ul.payment_methods li input,
+.woocommerce-checkout #payment ul.payment_methods li input {
+	margin: 0 1em 0 0;
+	width: 14px;
+	float: left;
+	margin-top: 10px;
 }
 
 .wc_payment_method label {
 	width: auto;
+}
+
+.storefront-full-width-content.woocommerce-cart .entry-header,
+.storefront-full-width-content.woocommerce-checkout .entry-header,
+.storefront-full-width-content.woocommerce-account .entry-header,
+.storefront-full-width-content .woocommerce-products-header {
+	padding-bottom: 0px;
 }
 
 .single-product {
