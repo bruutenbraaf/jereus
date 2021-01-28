@@ -598,6 +598,63 @@ h3 {
 	}
 }
 
+.e {
+	background: rgb(219, 219, 219);
+}
+.m-row {
+	display: flex;
+	padding: 10px 0px;
+}
+.m-container {
+	margin-bottom: 38px;
+}
+
+.glightbox-tgl {
+	&:hover {
+		font-weight: bold;
+		cursor: pointer;
+	}
+}
+.glightbox {
+	position: fixed;
+	background: rgba(0, 0, 0, 0.5);
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 9999999;
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.2s ease-in-out;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	.close-tgl {
+		width: 30px;
+		height: 30px;
+		margin-left: auto;
+		position: relative;
+		cursor: pointer;
+		div {
+			width: 100%;
+			min-height: 3px;
+			background: white;
+			position: absolute;
+			&:nth-child(1) {
+				transform: rotate(45deg);
+			}
+			&:nth-child(2) {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}
+
+.is-shown {
+	opacity: 1;
+	pointer-events: all;
+}
+
 .about {
 	color: #fff;
 	background: $hoofdcolor;
@@ -828,11 +885,12 @@ h3 {
 
 .woocommerce-account .woocommerce-MyAccount-navigation {
 	width: 100% !important;
+	padding-bottom: 24px;
 }
 
 .woocommerce-account .woocommerce-MyAccount-content {
-    float: left !important;
-    width: 100% !important;
+	float: left !important;
+	width: 100% !important;
 }
 
 .the_content {

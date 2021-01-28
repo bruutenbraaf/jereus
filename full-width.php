@@ -1,28 +1,24 @@
 <?php
-	/* 
+/* 
 		
 		template name: Full width 
 		
-	*/	
+	*/
 get_header(); ?>
 
-<?php if ( get_field( 'omslagfoto_pagina' ) ) { ?>
-<div class="categorie_omslag" style="background:url('<?php the_field( 'omslagfoto_pagina' ); ?>'); background-position: <?php the_field( 'foto_positie_pagina' ); ?>;">
-	
-</div>
+<?php if (get_field('omslagfoto_pagina')) { ?>
+	<div class="categorie_omslag" style="background:url('<?php the_field('omslagfoto_pagina'); ?>'); background-position: <?php the_field('foto_positie_pagina'); ?>;">
+
+	</div>
 
 <?php } ?>
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			
-			
-			<?php if (have_posts()) : while (have_posts()) : the_post();?>
-				<?php the_content(); ?>
-			<?php endwhile; endif; ?>
-			
-			
-			
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					<?php the_content(); ?>
+			<?php endwhile;
+			endif; ?>
 		</div>
 	</div>
 </div>
