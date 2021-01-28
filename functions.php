@@ -16,7 +16,8 @@ function register_my_menus() {
       'hoofd_menu' => __( 'Hoofd Menu' ),
       'cat_menu' => __( 'Categorie Menu' ),
       'gebruiker_menu' => __( 'Gebruiker Menu' ),
-      'second_menu' => __( 'Secondaire Menu' ),
+	  'second_menu' => __( 'Secondaire Menu' ),
+	  'socket_menu' => __( 'Socket Menu' ),
     )
   );
 }

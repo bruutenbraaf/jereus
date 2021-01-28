@@ -621,6 +621,21 @@ h3 {
   .footer h2 {
     font-family: "Roboto Slab", serif; }
 
+.socket {
+  background: #0a0a0a;
+  color: #ffffff;
+  padding: 14px 0px; }
+  .socket .menu {
+    display: flex;
+    list-style: none;
+    margin: 0px -8px;
+    padding: 0px; }
+    .socket .menu a {
+      color: #ffffff;
+      margin: 0px 8px; }
+      .socket .menu a:hover {
+        font-weight: bold; }
+
 .the_content {
   padding: 6vh 15px; }
 
