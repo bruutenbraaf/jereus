@@ -1180,6 +1180,25 @@ h3 {
 	}
 }
 
+
+.woocommerce ul#shipping_method li input {
+    margin: 3px .4375em 0 0;
+    margin-top: 6px;
+    float: left;
+    width: 14px;
+}
+
+#add_payment_method #payment ul.payment_methods li input, .woocommerce-cart #payment ul.payment_methods li input, .woocommerce-checkout #payment ul.payment_methods li input {
+    margin: 0 1em 0 0;
+    width: 14px;
+    float: left;
+    margin-top: 10px;
+}
+
+.payment_method_cod {
+	width: auto;
+}
+
 .single-product {
 	.price {
 		font-weight: bold;
