@@ -1200,6 +1200,18 @@ h3 {
 	width: auto;
 }
 
+#tribe-bar-date,
+#tribe-bar-search,
+.woocommerce input {
+	width: 100%;
+	padding: 13px;
+	border-top: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+	border-left: 1px solid #e7e7e7;
+	border-right: 1px solid #e7e7e7;
+	width: 14px;
+}
+
 .storefront-full-width-content.woocommerce-cart .entry-header,
 .storefront-full-width-content.woocommerce-checkout .entry-header,
 .storefront-full-width-content.woocommerce-account .entry-header,
