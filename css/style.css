@@ -1442,7 +1442,7 @@ label {
 .pop {
   width: calc(100vw - 30px);
   margin: 15px;
-  background: #ff0;
+  background: #e9db2e;
   position: fixed;
   bottom: 15px;
   left: 0;
