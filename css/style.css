@@ -953,6 +953,9 @@ h3 {
 .storefront-full-width-content .woocommerce-products-header {
   padding-bottom: 0px; }
 
+.woocommerce form {
+  overflow: hidden; }
+
 .single-product .price {
   font-weight: bold;
   font-size: 2rem; }
