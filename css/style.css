@@ -1439,10 +1439,59 @@ label {
 .single-product .sidebar .widgettitle::after {
   display: none; }
 
+.pop {
+  width: calc(100vw - 30px);
+  margin: 15px;
+  background: yellow;
+  position: fixed;
+  bottom: 15px;
+  left: 0px;
+  z-index: 9999;
+  padding: 15px; }
+  .pop svg {
+    width: 19px;
+    height: 14px;
+    opacity: 0.4;
+    top: 4px;
+    position: relative;
+    float: left; }
+  .pop p {
+    display: flex;
+    margin: 0;
+    padding-left: 4px; }
+  .pop #accept-message {
+    font-weight: 900;
+    font-family: "Roboto Slab", serif;
+    color: #111;
+    letter-spacing: 0.46px;
+    margin-left: 8px; }
+    .pop #accept-message:hover {
+      text-decoration: underline;
+      cursor: pointer; }
+  .pop .small-btn {
+    font-weight: 900;
+    font-family: "Roboto Slab", serif;
+    color: #111;
+    letter-spacing: 0.46px;
+    margin-left: 8px; }
+    .pop .small-btn:after {
+      padding-left: 16px;
+      content: "|"; }
+    .pop .small-btn:hover {
+      text-decoration: underline;
+      cursor: pointer; }
+
 @media only screen and (min-width: 1024px) {
   .container {
     max-width: 90%; } }
 @media only screen and (max-width: 1024px) {
+  .pop p {
+    margin-bottom: 14px;
+    margin-left: 8px;
+    margin-right: 8px; }
+  .pop svg {
+    display: none; }
+
   .container {
     width: 95%; }
 

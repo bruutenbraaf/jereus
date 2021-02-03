@@ -94,4 +94,27 @@ jQuery(document).ready(function () {
 jQuery("body").on('click', '.mobile-nav .menu-item-has-children', function () {
     jQuery(this).find('.sub-menu').slideToggle();
     jQuery(this).toggleClass('active-menu');
-  });
+});
+
+
+/* global cookie_pop_text */
+(function ($) {
+
+    'use strict';
+
+    if ('set' !== $.cookie('cookie-pop')) {
+
+        $('#accept-message').click(function () {
+
+            $.cookie('cookie-pop', 'set', { expires: 7, path: '/' });
+            $('.pop').fadeOut();
+
+        });
+
+    }
+
+    if ('set' == $.cookie('cookie-pop')) {
+        $('.pop').remove();
+    }
+
+}(jQuery));
