@@ -1442,14 +1442,32 @@ label {
 .single-product .woocommerce-notices-wrapper {
   position: fixed;
   width: calc(100% - 40px);
-  bottom: 0px;
+  bottom: 15px;
   left: 15px;
   z-index: 99999; }
   .single-product .woocommerce-notices-wrapper .woocommerce-message {
-    margin: 0;
+    background: #ece034;
     border-top: 0;
     margin: 0;
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2); }
+    color: black;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    padding: 15px 30px; }
+    .single-product .woocommerce-notices-wrapper .woocommerce-message .button {
+      background: black;
+      color: white;
+      font-weight: 900;
+      font-family: "Roboto Slab", serif;
+      letter-spacing: 0.46px;
+      order: 3;
+      margin-left: auto; }
+  .single-product .woocommerce-notices-wrapper .woocommerce-message::before {
+    content: "\e015";
+    color: #0000005c; }
+  .single-product .woocommerce-notices-wrapper .woocommerce-message::before {
+    position: relative;
+    display: none; }
 
 .pop {
   width: calc(100vw - 30px);
@@ -1498,6 +1516,20 @@ label {
   .container {
     max-width: 90%; } }
 @media only screen and (max-width: 1024px) {
+  .single-product .woocommerce-notices-wrapper {
+    position: fixed;
+    width: calc(100% - 40px);
+    bottom: 15px;
+    left: 15px;
+    z-index: 99999; }
+    .single-product .woocommerce-notices-wrapper .woocommerce-message {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 30px 30px; }
+      .single-product .woocommerce-notices-wrapper .woocommerce-message .button {
+        margin-left: 0;
+        margin-top: 15px; }
+
   .pop p {
     margin-bottom: 14px;
     margin-left: 8px;
