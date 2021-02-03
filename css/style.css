@@ -956,6 +956,9 @@ h3 {
 .woocommerce form {
   overflow: hidden; }
 
+.woo-variation-swatches .variable-items-wrapper {
+  padding-left: 5px; }
+
 .single-product .price {
   font-weight: bold;
   font-size: 2rem; }
