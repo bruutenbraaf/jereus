@@ -82,3 +82,11 @@ $(document).ready(function () {
     });
 });
 
+// Faq
+jQuery(document).ready(function () {
+    jQuery("body").on('click', '.faq', function () {
+        jQuery(this).find('p').slideToggle(200);
+        jQuery(this).toggleClass('is--open');
+    });
+});
+

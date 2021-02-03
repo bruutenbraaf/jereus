@@ -1819,6 +1819,51 @@ label {
 	width: 100%;
 }
 
+.faq {
+	background: #f1f1f1;
+	padding: 8px;
+	margin-bottom: 8px;
+	cursor: pointer;
+	transition: ease-in-out 0.2s;
+	&:hover {
+		background: #e2e2e2;
+	}
+	p {
+		display: none;
+		margin: 0;
+		padding: 8px 0px 0px 0px;
+	}
+	h3 {
+		margin: 0px;
+		position: relative;
+		width: 100%;
+		svg {
+			position: absolute;
+			right: 0;
+			top: 8px;
+			width: 14px;
+			height: auto;
+			transition: ease-in-out 0.2s;
+		}
+	}
+}
+
+.faq-content {
+	margin-bottom: 32px;
+	width: 100%;
+	h2{
+		margin-bottom: 16px;
+	}
+}
+
+.is--open {
+	h3 {
+		svg {
+			transform: rotate(180deg);
+		}
+	}
+}
+
 @media only screen and (min-width: 1024px) {
 	.container {
 		max-width: 90%;
