@@ -72,7 +72,7 @@ $(document).ready(function () {
     });
 
     $(".h_button").click(function (event) {
-        $(".hoofd_menu .container .row .categorieen").delay(200).slideToggle('100');
+        $(".mobile-nav").slideToggle();
         $('.top_bar .container .row .top_menu').toggleClass("open");
         if ($('.top_bar .container .row .top_menu').hasClass("open")) {
             $(".hoofd_menu .container .row").animate({ 'height': "100%" }), 100;
@@ -90,3 +90,8 @@ jQuery(document).ready(function () {
     });
 });
 
+
+jQuery("body").on('click', '.mobile-nav .menu-item-has-children', function () {
+    jQuery(this).find('.sub-menu').slideToggle();
+    jQuery(this).toggleClass('active-menu');
+  });

@@ -14,7 +14,8 @@ function register_my_menus() {
   register_nav_menus(
     array(
       'hoofd_menu' => __( 'Hoofd Menu' ),
-      'cat_menu' => __( 'Categorie Menu' ),
+	  'cat_menu' => __( 'Categorie Menu' ),
+	  'mob_menu' => __( 'Mobiel Menu' ),
       'gebruiker_menu' => __( 'Gebruiker Menu' ),
 	  'second_menu' => __( 'Secondaire Menu' ),
 	  'socket_menu' => __( 'Socket Menu' ),
