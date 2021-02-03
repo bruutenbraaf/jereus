@@ -59,7 +59,7 @@
 				</svg>
 				<?php the_field('pop_up_bericht', 'option'); ?>
 			</div>
-			<div class="col-md-6 d-flex justify-content-start justify-content-md-end">
+			<div class="col-md-6 d-flex justify-content-start justify-content-md-end align-items-center">
 				<div>
 					<?php $contact_knop = get_field('contact_knop', 'option'); ?>
 					<?php if ($contact_knop) { ?>
