@@ -112,6 +112,10 @@ h1 {
   h1 span {
     color: #e9db2e; }
 
+.product_title {
+  font-size: 32px;
+  margin-bottom: 16px; }
+
 h2 {
   font-family: "Roboto Slab", serif;
   font-size: 1.4em; }

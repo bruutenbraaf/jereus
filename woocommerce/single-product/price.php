@@ -23,6 +23,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $product;
 
 ?>
+
+<h1 class="product_title"><?php the_title();?></h1>
 <span class="amount_incl"><?php echo $product->get_price_html(); ?></span>
 <span class="amount_excl"><?php echo wc_price( wc_get_price_excluding_tax( $product ) ); ?> excl. BTW</span>
 
