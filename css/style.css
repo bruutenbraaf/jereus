@@ -54,16 +54,6 @@
   animation-duration: 0.4s;
   animation-fill-mode: forwards; }
 
-.chosen:after {
-  animation: rotateIn;
-  animation-duration: 0.6s;
-  animation-fill-mode: forwards; }
-
-.chosen:before {
-  animation: rotateInSecond;
-  animation-duration: 1s;
-  animation-fill-mode: forwards; }
-
 .woocommerce .quantity .qty,
 .woocommerce div.product form.cart div.quantity input {
   width: 100%;
@@ -707,19 +697,29 @@ h3 {
 .the_content {
   padding: 6vh 15px; }
 
-.nice-select .list {
-  right: 0;
-  left: inherit; }
-
-.nice-select.open .list {
-  max-height: 200px;
-  overflow: scroll; }
-
 .sidebar {
   position: relative; }
   .sidebar .inner_sidebar {
-    position: sticky;
     top: 115px; }
+  .sidebar .hidden_filters {
+    width: 100%; }
+  .sidebar span.open_filters {
+    cursor: pointer;
+    display: block;
+    margin-top: 6px;
+    color: #e9db2e !important; }
+    .sidebar span.open_filters:before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      position: relative;
+      display: block;
+      float: left;
+      margin: 5px 8px 0 0;
+      background-image: url(../img/more.svg);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat; }
   .sidebar label {
     font-family: "Roboto Slab", serif;
     font-size: 1.4rem;
@@ -730,7 +730,6 @@ h3 {
   .sidebar .widget {
     border-top: 1px solid #e7e7e7; }
     .sidebar .widget .widget-content {
-      display: none;
       padding-bottom: 10px; }
     .sidebar .widget h2 {
       font-family: "Roboto Slab", serif;
@@ -766,8 +765,11 @@ h3 {
     .sidebar .widget span {
       color: #e9db2e; }
     .sidebar .widget a {
-      color: #4a4a4a;
-      display: block; }
+      color: #6f6f6f;
+      display: block;
+      transition: all 0.2s ease-in-out; }
+      .sidebar .widget a:hover {
+        color: black; }
     .sidebar .widget p {
       font-size: 16px; }
   .sidebar .price_label {
@@ -813,48 +815,17 @@ h3 {
     background-position: bottom; }
 
 .wc-layered-nav-term {
-  position: relative; }
-  .wc-layered-nav-term:after {
-    content: "";
-    width: 9px;
-    min-height: 1px;
-    background: #4a4a4a;
-    position: absolute;
-    right: 0;
-    top: 11px;
-    transform: rotate(0deg); }
+  position: relative;
+  display: flex; }
   .wc-layered-nav-term:before {
     content: "";
-    width: 1px;
-    min-height: 9px;
-    background: #4a4a4a;
-    position: absolute;
-    right: 4px;
-    top: 7px;
-    transform: rotate(0deg); }
+    width: 13px;
+    height: 13px;
+    margin: 7px 12px 0px 0px;
+    border: 1px solid #bbbaba; }
 
-.chosen {
-  color: black;
-  position: relative; }
-  .chosen a {
-    font-weight: 500;
-    color: #383838 !important; }
-  .chosen:after {
-    content: "";
-    width: 9px;
-    min-height: 1px;
-    background: black;
-    position: absolute;
-    right: 0;
-    top: 11px; }
-  .chosen:before {
-    content: "";
-    width: 1px;
-    min-height: 9px;
-    background: black;
-    position: absolute;
-    right: 4px;
-    top: 7px; }
+.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-widget-layered-nav-list__item--chosen a::before {
+  display: none; }
 
 .wc-layered-nav-term chosen:before {
   transform: rotate(4deg) !important; }
@@ -1010,7 +981,8 @@ small .woocommerce-Price-amount {
   align-items: center;
   border-bottom: 1px solid #e7e7e7; }
   .orderby .woocommerce-ordering {
-    margin-left: auto; }
+    margin-left: auto;
+    overflow: visible; }
 
 .summary .amount_incl {
   font-size: 32px;
@@ -1521,6 +1493,23 @@ label {
     .pop .small-btn:hover {
       text-decoration: underline;
       cursor: pointer; }
+
+.chosen:before {
+  content: "";
+  width: 13px;
+  height: 13px;
+  margin: 7px 12px 0px 0px;
+  border: 1px solid #111111;
+  background-image: url(../img/check.svg);
+  background-size: 85%;
+  background-position: center center;
+  background-repeat: no-repeat; }
+.chosen a {
+  color: #111111 !important; }
+
+li.chosen {
+  position: relative;
+  display: flex; }
 
 @media only screen and (min-width: 1024px) {
   .container {

@@ -80,6 +80,28 @@ $(document).ready(function () {
         else {
         }
     });
+
+    $.fn.extend({
+        toggleText: function (a, b) {
+            return this.text(this.text() == b ? a : b);
+        }
+    });
+
+
+    $('ul.woocommerce-widget-layered-nav-list').each(function () {
+        $(this).children().slice(3).wrapAll("<span class='hidden_filters'></span>");
+    });
+
+    $('.hidden_filters').hide();
+
+    $('.hidden_filters').after('<span class="open_filters">Toon meer</span>');
+
+    $(".open_filters").click(function () {
+        $(this).prev(".hidden_filters").toggle();
+        $(this).toggleText('Toon meer', 'Toon minder');
+        $(this).toggleClass('is_clicked');
+    });
+
 });
 
 // Faq
