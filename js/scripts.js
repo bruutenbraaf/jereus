@@ -102,6 +102,17 @@ $(document).ready(function () {
         $(this).toggleClass('is_clicked');
     });
 
+
+    jQuery("body").on('click', '.filter-mob', function () {
+        $('.woocommerce .sidebar').toggleClass('sidebar-active');
+        $('.sidebar-active').append('<span class="close-filters"></span>');
+    });
+
+    jQuery("body").on('click', '.close-filters', function () {
+        $('.woocommerce .sidebar').toggleClass('sidebar-active');
+        $('.close-filters').remove();
+    }); 
+
 });
 
 // Faq
@@ -117,6 +128,8 @@ jQuery("body").on('click', '.mobile-nav .menu-item-has-children', function () {
     jQuery(this).find('.sub-menu').slideToggle();
     jQuery(this).toggleClass('active-menu');
 });
+
+
 
 
 /* global cookie_pop_text */
