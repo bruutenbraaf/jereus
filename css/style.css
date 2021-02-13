@@ -984,6 +984,9 @@ small .woocommerce-Price-amount {
     margin-left: auto;
     overflow: visible; }
 
+.nice-select.open .list {
+  z-index: 10; }
+
 .summary .amount_incl {
   font-size: 32px;
   width: 100%;

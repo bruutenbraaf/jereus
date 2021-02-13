@@ -1281,6 +1281,10 @@ small {
 	}
 }
 
+.nice-select.open .list {
+	z-index: 10;
+}
+
 .summary {
 	.amount_incl {
 		font-size: 32px;
