@@ -35,14 +35,14 @@
 	<div class="hoofd_menu">
 		<div class="container">
 			<div class="row d-flex align-items-center">
-				<div class="col-1 col-md-1 d-lg-none d-md-block">
+				<div class="col-2 col-md-1 d-lg-none d-md-block">
 					<div class="h_button">
 						<span></span>
 						<span></span>
 						<span></span>
 					</div>
 				</div>
-				<div class="branding col-lg-2 col-md-10 col-10 d-flex justify-content-lg-start justify-content-md-center justify-content-center">
+				<div class="branding col-lg-2 col-md-10 col-8 d-flex justify-content-lg-start justify-content-md-center justify-content-center">
 					<a href="<?php echo get_home_url(); ?>">
 						<?php if (get_field('logo', 'option')) { ?>
 							<img src="<?php the_field('logo', 'option'); ?>" />
@@ -52,7 +52,7 @@
 				<div class="categorieen desk-nav ma-nav col-lg-9 d-lg-block d-md-none d-none">
 					<?php wp_nav_menu(array('theme_location' => 'cat_menu')); ?>
 				</div>
-				<div class="col-md-1 col-1 winkelmand">
+				<div class="col-md-1 col-2 winkelmand">
 					<a href="<?php echo get_permalink(wc_get_page_id('cart')); ?>">
 						<div class="cart">
 							<div class="count">
