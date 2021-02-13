@@ -1989,7 +1989,6 @@ li.chosen {
 }
 
 @media only screen and (max-width: 991px) {
-
 	.carousel .carousel-inner {
 		.carousel-item {
 			.container {
@@ -2011,6 +2010,14 @@ li.chosen {
 				}
 			}
 		}
+	}
+
+	.carousel .carousel-inner .carousel-item .container .row .button {
+		margin-top: 20px;
+		display: -webkit-inline-box;
+		color: #383838;
+		padding: 10px 18px;
+		background: #e9db2e;
 	}
 
 	.single-product {
