@@ -49,10 +49,10 @@ $priceslider: #d6d6d6;
 	width: 100%;
 }
 
-input {
-	-webkit-appearance: none;
-	apperance: none;
-	-moz-appearance: none;
+.top_bar .container .row ul li {
+    float: left;
+    line-height: 1;
+    margin: 0px 5px;
 }
 
 %normalbutton {
@@ -2420,6 +2420,12 @@ li.chosen {
     float: left;
     width: 48%;
     max-width: inherit;
+}
+
+.woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-2 {
+    float: right;
+    width: 48%;
+	max-width: inherit;
 }
 
 @media only screen and (max-width: 320px) {

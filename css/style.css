@@ -13,10 +13,10 @@
   box-sizing: border-box;
   width: 100%; }
 
-input {
-  -webkit-appearance: none;
-  apperance: none;
-  -moz-appearance: none; }
+.top_bar .container .row ul li {
+  float: left;
+  line-height: 1;
+  margin: 0px 5px; }
 
 .woocommerce #respond input#submit,
 .woocommerce a.button,
@@ -1839,6 +1839,11 @@ li.chosen {
     float: right; } }
 .woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1 {
   float: left;
+  width: 48%;
+  max-width: inherit; }
+
+.woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-2 {
+  float: right;
   width: 48%;
   max-width: inherit; }
 
