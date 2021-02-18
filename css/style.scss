@@ -2416,6 +2416,12 @@ li.chosen {
 	}
 }
 
+.woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1 {
+    float: left;
+    width: 48%;
+    max-width: inherit;
+}
+
 @media only screen and (max-width: 320px) {
 	.top_bar .container {
 		.row {
